@@ -32,6 +32,6 @@ def read_root(request: TextRequest):
         }])
         
         llama_response = response.get('message', {}).get('content', '')
-        return {"Resposta": llama_response}   
+        return {"reply": llama_response}   
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
